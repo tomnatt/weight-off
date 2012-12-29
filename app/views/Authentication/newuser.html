@@ -1,0 +1,8 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<form action="@{Authentication.createNewUser()}" method="POST">
+    <label for="name">What's your name?</label>
+    <input size="100" type="text" name="name" id="name" />
+    <input type="submit" value="create account" />
+</form>

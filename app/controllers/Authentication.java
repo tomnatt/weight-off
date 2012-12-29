@@ -13,48 +13,53 @@ public class Authentication extends Controller {
 
     @Before(unless={"login", "authenticate"})
     static void checkAuthenticated() {
-
-        System.out.println("checkAuthenticated");
-        
+        // if there is a user in the session and that user exists then legit
         if (!session.contains("user")) {
             login();
         }
-        
     }
-     
+    
     public static void login() {
-        System.out.println("login");
         render();
     }
+    
+    public static void newuser() {
+        render();
+    }
+    
+    public static void createNewUser(String name) {
+        // create new user
+        User u = new User(session.get("user"), name);
+        u.save();
         
+        // off to the application
+        WeightOff.index();
+    }
+     
     public static void authenticate(String user) {
-
-        System.out.println("authenticate");
-        System.out.println("user: " + user);
 
         if (OpenID.isAuthenticationResponse()) {
             
             UserInfo verifiedUser = OpenID.getVerifiedID();
 
-            // TODO check here whether this user is allowed
-            
-            System.out.println("verifiedUser: " + verifiedUser.id);
-            
             if (verifiedUser == null) {
                 flash.put("error", "Oops. Authentication has failed");
                 login();
             } 
+            
             session.put("user", verifiedUser.id);
-            WeightOff.index();
+            
+            // if the user does not already exist, let them create an account       
+            if (!User.exists(session.get("user"))) {
+                newuser();
+            } else {
+                WeightOff.index();    
+            }
             
         } else {
-
-            System.out.println("about to verify");
             OpenID.id(user).verify(); // will redirect the user
-            System.out.println("verified");
-            
         }
         
     }
-
+    
 }
