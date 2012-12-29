@@ -2,6 +2,7 @@ package models;
  
 import javax.persistence.*;
 import java.util.List;
+import java.util.Date;
 
 import play.db.jpa.*;
  
@@ -10,8 +11,7 @@ public class Weight extends Model {
  
     public int kg;
     public int lb;
-    
-    // date
+    public Date date;
     
     @ManyToOne
     public User user;
@@ -20,6 +20,8 @@ public class Weight extends Model {
         
         // add user
         this.user = user;
+        // add date as now
+        this.date = new Date();
         
         if (type.equals("kg")) {
             this.kg = quantity;
