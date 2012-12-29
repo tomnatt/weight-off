@@ -3,6 +3,8 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import org.yaml.snakeyaml.Yaml;
+
 import models.*;
 
 public class WeightOff extends Controller {
@@ -49,11 +51,16 @@ public class WeightOff extends Controller {
     
     // show results of the current weights
     public static void current() {
+        Weight w = (Weight)Weight.findAll().get(0);
+        
+        Yaml yaml = new Yaml();
+        System.out.println(yaml.dump(w));
+        
         index();
     }
     
     // show results of the previous week
-    public static void thisWeek() {
+    public static void lastWeek() {
         index();
     }
     

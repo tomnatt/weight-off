@@ -6,7 +6,7 @@
 GET   /                     WeightOff.index
 GET   /add                  WeightOff.add
 GET   /current              WeightOff.current
-GET   /thisweek             WeightOff.thisWeek
+GET   /lastweek             WeightOff.lastWeek
 
 # Authentication
 GET   /login                Authentication.login
