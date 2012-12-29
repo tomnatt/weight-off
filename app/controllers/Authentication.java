@@ -9,7 +9,7 @@ import java.util.*;
 
 import models.*;
 
-public class Application extends Controller {
+public class Authentication extends Controller {
 
     @Before(unless={"login", "authenticate"})
     static void checkAuthenticated() {
@@ -22,11 +22,6 @@ public class Application extends Controller {
         
     }
      
-    public static void index() {
-        String username = session.get("user");
-        render(username);
-    }
-         
     public static void login() {
         System.out.println("login");
         render();
@@ -50,7 +45,7 @@ public class Application extends Controller {
                 login();
             } 
             session.put("user", verifiedUser.id);
-            index();
+            WeightOff.index();
             
         } else {
 
