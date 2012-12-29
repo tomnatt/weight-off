@@ -1,0 +1,12 @@
+#{extends 'main.html' /}
+#{set title:'Add weight' /}
+
+<form action="@{WeightOff.addWeight()}" method="GET">
+    <label for="weight">What is the weight?</label>
+    <input size="100" type="text" name="weight" id="weight" />
+    <select name="type">
+        <option value="kg">kg</option>
+        <option value="lb">lb</option>
+    </select>
+    <input type="submit" value="log" />
+</form>

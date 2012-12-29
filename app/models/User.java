@@ -14,6 +14,8 @@ public class User extends Model {
     public String name;
     
     // has many Weights
+    @OneToMany(mappedBy="user")
+    public List<Weight> weights;
 
     public User(String openid, String name) {
         this.openid = openid;
@@ -28,6 +30,10 @@ public class User extends Model {
         }
 
         return false;
+    }
+    
+    public String toString() {
+        return name;
     }
     
 }
