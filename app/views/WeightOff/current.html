@@ -5,9 +5,9 @@
     <div id="player1">
         <h2>${user.name}</h2>
         <ul>
-            <li>${user.getFirstWeight().kg}</li>
-            <li>${user.getLastWeight().kg}</li>
-            <li>Change</li>
+            <li>First: ${user.getFirstWeight().kg}kg</li>
+            <li>Last: ${user.getLastWeight().kg}kg</li>
+            <li>Change: ${user.getLastWeight().kg - user.getFirstWeight().kg}kg</li>
         </ul>
     </div>
 </div>
