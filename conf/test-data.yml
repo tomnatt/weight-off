@@ -1,58 +1,58 @@
 # you describe your data using the YAML notation here
 # and then load them using Fixtures.load("data.yml")
 
-User(tom):
+User(bob):
     openid: https://www.google.com/accounts/o8/id?id=AItOawkXlBiSbNfKqQWzwomxtUq4HJbxCiu9h4Q
-    name: Tom
+    name: Bob
 
-User(mum):
+User(jane):
     openid: https://www.google.com/accounts/o8/id?id=xxxxx
-    name: Jackie
+    name: Jane
 
 Weight(w1):
     date: 2012-12-29T19:25:51.725Z
     kg: 100
     lb: 100
-    user: tom
+    user: bob
 
 Weight(w2):
     date: 2012-12-24T19:25:51.725Z
     kg: 105
     lb: 105
-    user: tom
+    user: bob
 
 Weight(w3):
     date: 2012-12-21T19:25:51.725Z
     kg: 107
     lb: 107
-    user: tom
+    user: bob
 
 Weight(w4):
     date: 2012-12-18T19:25:51.725Z
     kg: 110
     lb: 110
-    user: tom
+    user: bob
 
 Weight(w5):
     date: 2012-12-17T19:25:51.725Z
     kg: 80
     lb: 80
-    user: mum
+    user: jane
 
 Weight(w6):
     date: 2012-12-22T19:25:51.725Z
     kg: 85
     lb: 85
-    user: mum
+    user: jane
     
 Weight(w7):
     date: 2012-12-27T19:25:51.725Z
     kg: 76
     lb: 76
-    user: mum
+    user: jane
     
 Weight(w8):
     date: 2012-12-29T19:25:51.725Z
     kg: 78
     lb: 78
-    user: mum
+    user: jane
