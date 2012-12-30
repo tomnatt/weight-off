@@ -51,12 +51,8 @@ public class WeightOff extends Controller {
     
     // show results of the current weights
     public static void current() {
-        Weight w = (Weight)Weight.findAll().get(0);
-        
-        Yaml yaml = new Yaml();
-        System.out.println(yaml.dump(w));
-        
-        index();
+        User user = User.find("byOpenid", session.get("user")).first();
+        render(user);
     }
     
     // show results of the previous week
