@@ -14,3 +14,45 @@ Weight(w1):
     kg: 100
     lb: 100
     user: tom
+
+Weight(w2):
+    date: 2012-12-24T19:25:51.725Z
+    kg: 105
+    lb: 105
+    user: tom
+
+Weight(w3):
+    date: 2012-12-21T19:25:51.725Z
+    kg: 107
+    lb: 107
+    user: tom
+
+Weight(w4):
+    date: 2012-12-18T19:25:51.725Z
+    kg: 110
+    lb: 110
+    user: tom
+
+Weight(w5):
+    date: 2012-12-17T19:25:51.725Z
+    kg: 80
+    lb: 80
+    user: mum
+
+Weight(w6):
+    date: 2012-12-22T19:25:51.725Z
+    kg: 85
+    lb: 85
+    user: mum
+    
+Weight(w7):
+    date: 2012-12-27T19:25:51.725Z
+    kg: 76
+    lb: 76
+    user: mum
+    
+Weight(w8):
+    date: 2012-12-29T19:25:51.725Z
+    kg: 78
+    lb: 78
+    user: mum
