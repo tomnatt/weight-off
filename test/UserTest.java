@@ -58,4 +58,11 @@ public class UserTest extends BaseTest {
         assertEquals("Bob", players.get(0).name);
     }
     
+    @Test
+    public void testNoGame() {
+        User steve = new User("openid", "Steve");
+        assertNotNull(steve.games);
+        assertFalse(steve.inGame());
+    }
+    
 }
