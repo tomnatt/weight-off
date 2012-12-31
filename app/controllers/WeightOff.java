@@ -50,16 +50,16 @@ public class WeightOff extends Controller {
         index();
     }
     
+    
+    /*
+     * TODO note currently we support 1x 2 player games, 
+     * although we don't enforce that in the schema
+     */
     // show results of the current weights
     public static void current() {
         User player1 = User.find("byOpenid", session.get("user")).first();
         
         if (player1.inGame()) {
-            /*
-             * TODO note currently we support 2 player games, 
-             * although we don't enforce that
-             */
-
             // player 1's games, get 1st, get list of opponents, get 1st
             User player2 = player1.games.get(0).getOpponents(player1).get(0);
              
