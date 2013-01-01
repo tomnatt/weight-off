@@ -27,6 +27,10 @@ body {
     padding-left: 30px;
 }
 
+.home {
+    clear: both;
+}
+
 /* ------------------------------------------------------------ homepage */
 #homepage .player ul li a {
     text-decoration: none;
