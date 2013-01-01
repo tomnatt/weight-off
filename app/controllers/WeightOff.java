@@ -58,16 +58,27 @@ public class WeightOff extends Controller {
     // show results of the current weights
     public static void current() {
         User player1 = User.find("byOpenid", session.get("user")).first();
+        int p1Change = player1.getLastWeight().kg - player1.getFirstWeight().kg;
         
         if (player1.inGame()) {
             // player 1's games, get 1st, get list of opponents, get 1st
             User player2 = player1.games.get(0).getOpponents(player1).get(0);
+            int p2Change = player2.getLastWeight().kg - player2.getFirstWeight().kg;
+            
+            String winner = "";
+            if (p1Change < p2Change) {
+                winner = "player1";
+            } else if (p1Change > p2Change) {
+                winner = "player2";
+            } else {
+                winner = "draw";
+            }
              
             // if in a game, use the game template (default)
-            render(player1, player2);
+            render(player1, p1Change, player2, p2Change, winner);
         } else {
             // else use the single player template
-            render("WeightOff/single.html", player1);
+            render("WeightOff/single.html", player1, p1Change);
         }
         
     }

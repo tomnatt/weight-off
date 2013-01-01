@@ -1,21 +1,43 @@
 #{extends 'main.html' /}
 #{set title:'Current' /}
 
-<div id="current">
-    <div id="player1">
+<div id="current" class="col_12 game">
+    <div id="player1" class="player col_5#{if winner == "player1"} winner#{/if}">
         <h2>${player1.name}</h2>
         <ul>
             <li>First: ${player1.getFirstWeight().kg}kg</li>
             <li>Last: ${player1.getLastWeight().kg}kg</li>
-            <li>Change: ${player1.getLastWeight().kg - player1.getFirstWeight().kg}kg</li>
+            <li class="notice
+            #{if p1Change < 0}
+            success
+            #{/if}
+            #{elseif p1Change == 0}
+            warning
+            #{/elseif}
+            #{else}
+            error
+            #{/else}">
+                Change: ${p1Change}kg
+            </li>
         </ul>
     </div>
-    <div id="player2">
+    <div id="player2" class="player col_5#{if winner == "player2"} winner#{/if}">
         <h2>${player2.name}</h2>
         <ul>
             <li>First: ${player2.getFirstWeight().kg}kg</li>
             <li>Last: ${player2.getLastWeight().kg}kg</li>
-            <li>Change: ${player2.getLastWeight().kg - player2.getFirstWeight().kg}kg</li>
+            <li class="notice
+            #{if p2Change < 0}
+            success
+            #{/if}
+            #{elseif p2Change == 0}
+            warning
+            #{/elseif}
+            #{else}
+            error
+            #{/else}">
+                Change: ${p2Change}kg
+            </li>
         </ul>
     </div>
 </div>
