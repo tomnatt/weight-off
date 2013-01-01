@@ -15,13 +15,6 @@ body {
     
 }
 
-#homepage #player1 ul li a {
-    text-decoration: none;
-}
-#homepage #player1 ul li a:hover {
-    text-decoration: underline;
-}
-
 .player {
     border:1px solid #ccc;
     border-radius: 5px;
@@ -34,6 +27,28 @@ body {
     padding-left: 30px;
 }
 
+/* ------------------------------------------------------------ homepage */
+#homepage .player ul li a {
+    text-decoration: none;
+}
+#homepage .player ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------------------------------ add */
+#add .player form label {
+    display: block;
+}
+#add .player form input#weight {
+    width: 300px;
+}
+#add .player form input.submit {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------ current */
 .winner {
     background-color: rgb(255,255,0);
     background-color: rgba(0,255,0,0.5);
