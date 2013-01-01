@@ -1,11 +1,13 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<div id="homepage">
-    <p>Hello ${user.name}</p>
-    <ul>
-        <li><a href="@{WeightOff.add}">Add</a></li>
-        <li><a href="@{WeightOff.current}">Current</a></li>
-        <li><a href="@{WeightOff.lastWeek}">Last week...</a></li>
-    </ul>
+<div id="homepage" class="col_12 game">
+    <div id="player1" class="player col_5">
+        <h1>Hello ${user.name}</h1>
+        <ul>
+            <li><a href="@{WeightOff.add}">Add</a></li>
+            <li><a href="@{WeightOff.current}">Current</a></li>
+            <li><a href="@{WeightOff.lastWeek}">Last week...</a></li>
+        </ul>
+    </div>  
 </div>

@@ -15,6 +15,13 @@ body {
     
 }
 
+#homepage #player1 ul li a {
+    text-decoration: none;
+}
+#homepage #player1 ul li a:hover {
+    text-decoration: underline;
+}
+
 .player {
     border:1px solid #ccc;
     border-radius: 5px;
