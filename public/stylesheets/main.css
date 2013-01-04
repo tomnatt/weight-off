@@ -1,58 +1,71 @@
+/* ------------------------------------------------------------ general */
 body {
     margin:0;
     padding:0;
     color:#000;
     background:black url(/public/images/stressed_linen.png) repeat center top;
     color: #efefef;
-    font:normal 0.9em/150% 'Arimo', "Trebuchet MS", arial, verdana, sans-serif;
+    font:normal 1em/150% 'Arimo', "Trebuchet MS", arial, verdana, sans-serif;
     text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
 }
-
 #wrap {
     width:960px;/*960*/
     margin:30px auto 30px auto;
     padding:0;
     
 }
-
-.player {
+.content {
     border:1px solid #ccc;
     border-radius: 5px;
     padding: 3px 25px;
 }
-.player ul {
+.content ul {
     list-style: none;
 }
-.player ul li {
+.content ul li {
+    font-size: 20px;
     padding-left: 30px;
 }
-
-.home {
+.clearBoth {
     clear: both;
 }
 
-/* ------------------------------------------------------------ homepage */
-#homepage .player ul li a {
+/* ------------------------------------------------------------ links */
+a {
     text-decoration: none;
 }
-#homepage .player ul li a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* ------------------------------------------------------------ add */
-#add .player form label {
+/* ------------------------------------------------------------ forms */
+label {
     display: block;
 }
-#add .player form input#weight {
-    width: 300px;
-}
-#add .player form input.submit {
+input[type="submit"] {
     display: block;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* ------------------------------------------------------------ current */
+/* ------------------------------------------------------------ login page */
+
+/* ------------------------------------------------------------ newuser page */
+input#name {
+    width: 300px;
+}
+
+/* ------------------------------------------------------------ homepage page */
+
+/* ------------------------------------------------------------ add page */
+input#weight {
+    width: 300px;
+}
+input.addSubmit {
+    padding-left: 7px;
+}
+
+/* ------------------------------------------------------------ current page */
 .winner {
     background-color: rgb(255,255,0);
     background-color: rgba(0,255,0,0.5);

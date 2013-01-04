@@ -1,12 +1,18 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{if flash.error}
-<h1>${flash.error}</h1>
-#{/if}
- 
-<form action="@{Authentication.authenticate()}" method="POST">
-    <label for="user">What's your OpenID?</label>
-    <input size="100" type="text" name="user" id="user" value="https://www.google.com/accounts/o8/id" />
-    <input type="submit" value="login..." />
-</form>
+<div id="login" class="col_12">
+    <div class="content col_9">
+
+        <h1>Howdy</h1>
+        
+        #{if flash.error}
+        <h2>${flash.error}</h2>
+        #{/if}
+         
+        <form action="@{Authentication.authenticate()}" method="POST">
+            <input size="100" type="hidden" name="user" id="user" value="https://www.google.com/accounts/o8/id" />
+            <input type="submit" value="Log in with Google" />
+        </form>
+    </div>  
+</div>

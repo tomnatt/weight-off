@@ -1,8 +1,13 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<form action="@{Authentication.createNewUser()}" method="POST">
-    <label for="name">What's your name?</label>
-    <input size="100" type="text" name="name" id="name" />
-    <input type="submit" value="create account" />
-</form>
+<div id="login" class="col_12">
+    <div class="content col_9">
+        <h1>You're new!</h1>
+        <form action="@{Authentication.createNewUser()}" method="POST">
+            <label for="name">What is your name?</label>
+            <input size="100" type="text" name="name" id="name" />
+            <input type="submit" value="Create account" />
+        </form>
+    </div>  
+</div>

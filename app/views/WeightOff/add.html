@@ -1,8 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Add weight' /}
 
-<div id="add" class="col_12 game">
-    <div class="player col_9">
+<div id="add" class="col_12">
+    <div class="content col_9">
         <h1>Add a weight</h1>
         <form action="@{WeightOff.addWeight()}" method="GET">
             <label for="weight">What is the weight?</label>
@@ -11,8 +11,8 @@
                 <option value="kg">kg</option>
                 <option value="lb">lb</option>
             </select>
-            <input type="submit" class="submit" value="Add" />
+            <input type="submit" class="addSubmit" value="Add" />
         </form>
     </div>  
-    <p class="home"><a href="@{WeightOff.index()}">home</a></p>
+    <p class="clearBoth"><a href="@{WeightOff.index()}">home</a></p>
 </div>

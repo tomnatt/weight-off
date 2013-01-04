@@ -1,22 +1,23 @@
 #{extends 'main.html' /}
 #{set title:'Current' /}
 
-<div id="current" class="single">
-    <div id="player1" class="player col_5">
+<div id="current" class="col_12">
+    <div id="player1" class="content col_5">
         <h2>${player1.name}</h2>
         <ul>
             <li>First: ${player1.getFirstWeight().kg}kg</li>
             <li>Last: ${player1.getLastWeight().kg}kg</li>
-            <li class="notice
+            <li 
             #{if p1Change < 0}
-            success
+            class="notice success"
             #{/if}
             #{elseif p1Change == 0}
-            warning
+            class="notice warning"
             #{/elseif}
             #{else}
-            error
-            #{/else}">
+            class="notice error"
+            #{/else}
+            >
                 Change: ${p1Change}kg
             </li>
         </ul>
