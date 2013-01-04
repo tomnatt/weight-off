@@ -4,6 +4,9 @@
 <div id="current" class="col_12">
     <div id="player1" class="content col_5">
         <h2>${player1.name}</h2>
+        #{if player1.getFirstWeight().kg == 0}
+        <p class="notice error">You need to add some weights!</p>
+        #{/if}
         <ul>
             <li>First: ${player1.getFirstWeight().kg}kg</li>
             <li>Last: ${player1.getLastWeight().kg}kg</li>
@@ -22,4 +25,5 @@
             </li>
         </ul>
     </div>
+    <p class="clearBoth"><a href="@{WeightOff.index()}">home</a></p>
 </div>

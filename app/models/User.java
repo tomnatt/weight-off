@@ -39,6 +39,11 @@ public class User extends Model {
                     return object1.date.compareTo(object2.date);
                 }
             });
+        
+        // if this user doesn't have any data, return a 0 weight    
+        if (weights.size() == 0) {
+            return new Weight(this, 0);
+        }
         return weights.get(0);
     }
     
@@ -51,6 +56,11 @@ public class User extends Model {
                     return object2.date.compareTo(object1.date);
                 }
             });
+        
+        // if this user doesn't have any data, return a 0 weight    
+        if (weights.size() == 0) {
+            return new Weight(this, 0);
+        }
         return weights.get(0);
     }
     
