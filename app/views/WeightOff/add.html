@@ -4,9 +4,12 @@
 <div id="add" class="col_12">
     <div class="content col_9">
         <h1>Add a weight</h1>
+        #{if flash.get("numError")}
+        <p class="notice error">${flash.get("numError")}</p>
+        #{/if}
         <form action="@{WeightOff.addWeight()}" method="GET">
             <label for="weight">What is the weight?</label>
-            <input size="100" type="text" name="weight" id="weight" />
+            <input size="100" tabindex="1" type="text" name="weight" id="weight" />
             <select name="type">
                 <option value="kg">kg</option>
                 <option value="lb">lb</option>

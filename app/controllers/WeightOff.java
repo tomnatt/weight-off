@@ -33,10 +33,15 @@ public class WeightOff extends Controller {
         // get user 
         User user = User.find("byOpenid", session.get("user")).first();
         
-        // TODO some error catching here
-        // get weight amount as int
-        double wD = Double.parseDouble(weight);
-        int wInt = (int)Math.round(wD);
+        int wInt = 0;
+        try {
+            // get input weight amount as int
+            double wD = Double.parseDouble(weight);
+            wInt = (int)Math.round(wD);
+        } catch (NumberFormatException e) {
+            flash.put("numError", "A real number, please");
+            add();
+        }
         
         // determine type
         String t = "kg";
