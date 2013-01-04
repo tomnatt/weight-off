@@ -1,7 +1,7 @@
 weight-off
 ==========
 
-Who can lose it the fastest?
+Motivate yourself to lose weight by crushing another person.
 
 To run
 ------
