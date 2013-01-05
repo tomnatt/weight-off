@@ -6,3 +6,6 @@
 %production.db.user=example
 %production.db.pass=examplepassword
 %production.jpa.ddl=update
+%production.http.port=9023
+# note no trailing slash on the path
+%production.http.path=/example
