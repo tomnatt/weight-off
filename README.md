@@ -6,6 +6,7 @@ Motivate yourself to lose weight by crushing another person.
 To run
 ------
 
+play dependencies
 ant  
 play run
 
